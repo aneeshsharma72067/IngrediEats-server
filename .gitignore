@@ -1,0 +1,50 @@
+*.csv
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Instance folder
+instance/
+
+# Logs
+*.log
+
+# Compiled Python files
+*.pyc
+
+# Database
+db.sqlite
+
+# Local development configuration
+config.py
+
+# Environment variables
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Flask generated files
+__init__.pyc
+__pycache__/
+
+# Package distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# If using Docker
+Dockerfile
+docker-compose.yml
+
+# Local development SQLite database
+/dev_db.sqlite
