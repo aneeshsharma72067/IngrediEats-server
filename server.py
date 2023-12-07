@@ -17,6 +17,15 @@ def allIngredients():
         'ingredients':dataset.getAllIngredients()
     } 
 
+@app.route('/api/similar-recipes')
+def getSimilarRecipes():
+    user_input = request.args.get('ingredients')
+    if not user_input:
+        return {'error': 'Empty user input'}
+    user_input = user_input.split('-')
+    return {
+        'similar_recipes':dataset.similarRecipes(user_input)
+    }
 
 if __name__ == '__main__':
     app.run(debug=True)
