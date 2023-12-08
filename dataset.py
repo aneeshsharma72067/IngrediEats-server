@@ -80,6 +80,7 @@ def similarRecipes(user_input):
         
         matching_rows['similarity_score'] = cosine_similarity(user_input_vector, tfidf_vectorizer.transform(matching_rows['New_ingredients_str']))[0]
         top_matches = matching_rows.sort_values(by='similarity_score', ascending=False)
+        top_matches['Cleaned_Ingredients'] = top_matches['Cleaned_Ingredients'].apply(eval)
         result = top_matches.to_dict(orient='records')[0:10]
         return result
 
